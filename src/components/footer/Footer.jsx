@@ -12,7 +12,7 @@ function Footer() {
           <h1 className={styles.logoText}>The Journal</h1>
         </div>
 
-        <p className={styles.desc}>where words take flight and creativity finds its digital canvas. Our blogging platform is more than just a space to share thoughts; it's a vibrant community of storytellers, vandrers, tech enthusiasts, thinkers and what not.</p>
+        <p className={styles.desc}>where words take flight and creativity finds its digital canvas. Our blogging platform is more than just a space to share thoughts; it&apos;s a vibrant community of storytellers, vandrers, tech enthusiasts, thinkers and what not.</p>
 
         <div className={styles.icons}>
           <Image src='/facebook.png' alt='facebook' width={18} height={18} />
