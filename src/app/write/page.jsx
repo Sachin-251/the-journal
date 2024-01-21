@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from './writePage.module.css';
 import Image from 'next/image';
-import ReactQuill from 'react-quill';
 import "react-quill/dist/quill.snow.css";
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
@@ -13,6 +12,7 @@ import {
     getDownloadURL,
   } from "firebase/storage";
 import { app } from '@/utils/firebase';
+import dynamic from 'next/dynamic';
 
 const modules = {
     toolbar: [
@@ -45,6 +45,7 @@ const modules = {
 
 const WritePage = () => {
 
+    const ReactQuill = dynamic(() => import('react-quill'),{ssr: false});
     const { status } = useSession();
     const router = useRouter();
 
@@ -97,7 +98,6 @@ const WritePage = () => {
     if(status === "unauthenticated"){
         router.push("/");
     }
-    console.log(value);
 
     const slugify = (str) =>
     str
