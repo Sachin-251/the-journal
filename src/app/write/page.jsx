@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from './writePage.module.css';
 import Image from 'next/image';
-import ReactQuill, { Quill } from 'react-quill';
+import ReactQuill from 'react-quill';
 import "react-quill/dist/quill.snow.css";
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
@@ -13,9 +13,6 @@ import {
     getDownloadURL,
   } from "firebase/storage";
 import { app } from '@/utils/firebase';
-import ImageResize from 'quill-image-resize-module-react';
-
-Quill.register('modules/imageResize', ImageResize);
 
 const modules = {
     toolbar: [
@@ -31,11 +28,7 @@ const modules = {
       [{ 'align': [] }],
       ['link', 'image', 'video'],
       ['clean']
-    ],
-    imageResize: {
-        parchment: Quill.import('parchment'),
-        modules: ['Resize', 'DisplaySize'],
-    }
+    ]
   }
 
  const formats = [
@@ -48,7 +41,6 @@ const modules = {
     'background',
     'align',
     'link', 'image', 'video',
-    'imageResize',
   ];
 
 const WritePage = () => {
