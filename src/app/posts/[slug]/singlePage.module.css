@@ -1,0 +1,136 @@
+.infoContainer {
+    display: flex;
+    align-items: center;
+    gap: 50px;    
+  }
+  
+  .textContainer {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 64px;
+    margin-bottom: 50px;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .userImageContainer {
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .userTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--softTextColor);
+  }
+  
+  .username {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    height: 350px;
+    position: relative;
+  }
+  
+  .image {
+    object-fit: cover;
+    border-radius: 2%;
+  }
+  
+  .content {
+    display: flex;
+    gap: 50px;
+  }
+  
+  .post {
+    flex: 5;
+    margin-top: 60px;
+  }
+  
+  .description p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .description h1{
+    font-size: 34px;
+    font-weight: 800;
+  }
+
+  .description h2{
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .description h3{
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .description img{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .description pre{
+    font-size: 16px;
+    background-color: var(--softBg);
+    padding: 2%;
+    border-radius: 2%;
+  }
+  
+  @media screen and (max-width: 1536px) {
+    .title {
+      font-size: 54px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .title {
+      font-size: 48px;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .imageContainer {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .title {
+      font-size: 36px;
+    }
+  
+    .description p{
+      font-size: 18px;
+    }
+
+    .description h1{
+      font-size: 28px;
+    }
+
+    .description h2{
+      font-size: 24px;
+    }
+
+    .description h3{
+      font-size: 22px;
+    }
+  }
