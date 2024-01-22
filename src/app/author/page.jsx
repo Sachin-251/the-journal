@@ -6,7 +6,7 @@ import Pagination from '@/components/pagination/Pagination';
 import Card from '@/components/card/Card';
 
 const getData = async (posId) => {
-    const res = await fetch(`http://localhost:3000/api/author?postId=${posId}`,{
+    const res = await fetch(`${process.env.URL}/api/author?postId=${posId}`,{
       cache: "no-store"
     });
   
