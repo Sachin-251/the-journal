@@ -62,12 +62,12 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .category {
-    width: 45%;
+  .container {
+    display: none;
   }
 }
-@media screen and (max-width: 640px) {
+/* @media screen and (max-width: 640px) {
   .category {
     width: 100%;
   }
-}
+} */

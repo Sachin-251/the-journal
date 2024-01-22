@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styles from './singlePage.module.css';
 import Menu from '@/components/Menu/Menu';
 import Image from 'next/image';
 import Comments from '@/components/comments/Comments';
+import Loader from '@/components/loader/Loader';
+import Link from 'next/link';
 
 const getData = async (slug) => {
     const res = await fetch(`${process.env.URL}/api/posts/${slug}`,{
@@ -21,6 +23,7 @@ const SinglePage = async ({params}) => {
     const data = await getData(slug);
 
   return (
+    <Suspense fallback={<Loader />}>
     <div className={styles.container}>
         <div className={styles.infoContainer}>
             <div className={styles.textContainer}>
@@ -33,7 +36,10 @@ const SinglePage = async ({params}) => {
                     )}
                     
                     <div className={styles.userTextContainer}>
-                        <span className={styles.username}>{data?.user.name}</span>
+                        <Link href={`/author?name=${data?.user.name}&postId=${data?.id}`}>
+                            <span className={styles.username}>{data?.user.name}</span>
+                        </Link>
+                        
                         <span className={styles.date}>{data?.createdAt.substring(0, 10)}</span>
                     </div>
                 </div>
@@ -55,6 +61,7 @@ const SinglePage = async ({params}) => {
             <Menu />
         </div>
     </div>
+    </Suspense>
   )
 }
 

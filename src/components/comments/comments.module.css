@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    padding: 2px;
   }
   
   .input {
@@ -67,4 +68,14 @@
   .desc{
     font-size: 18px;
     font-weight: 300;
+  }
+
+  @media screen and (max-width: 640px){
+    .write {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 100%;
+    }
   }

@@ -62,7 +62,7 @@
     flex: 5;
     margin-top: 60px;
   }
-  
+
   .description p {
     font-size: 20px;
     font-weight: 300;
@@ -87,8 +87,8 @@
 
   .description img{
     width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    margin: auto;
+    border-radius: 1%;
   }
 
   .description pre{

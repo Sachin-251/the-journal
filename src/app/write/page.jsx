@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import styles from './writePage.module.css';
 import Image from 'next/image';
 import "react-quill/dist/quill.snow.css";
@@ -13,6 +13,7 @@ import {
   } from "firebase/storage";
 import { app } from '@/utils/firebase';
 import dynamic from 'next/dynamic';
+import Loader from '@/components/loader/Loader';
 
 const modules = {
     toolbar: [
@@ -127,6 +128,7 @@ const WritePage = () => {
 
 
   return (
+    <Suspense fallback={<Loader />}>
     <div className={styles.container}>
         <input type="text" placeholder='Title' className={styles.input} onChange={(e) => setTitle(e.target.value)} />
         <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)} required>
@@ -170,6 +172,7 @@ const WritePage = () => {
 
         <button className={styles.publish} onClick={handleSubmit}>Publish</button>
     </div>
+    </Suspense>
   )
 }
 

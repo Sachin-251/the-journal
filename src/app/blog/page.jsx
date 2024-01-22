@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import styles from './blogPage.module.css';
 import CardList from '@/components/cardList/CardList';
 import Menu from '@/components/Menu/Menu';
+import Loader from '@/components/loader/Loader';
 
 const BlogPage = ({searchParams}) => {
 
@@ -9,6 +10,7 @@ const BlogPage = ({searchParams}) => {
   const { cat } = searchParams;
 
   return (
+    <Suspense fallback={<Loader />}>
     <div className={styles.container}>
         <h1 className={styles.title}>Category: {cat}</h1>
         <div className={styles.content}>
@@ -16,6 +18,7 @@ const BlogPage = ({searchParams}) => {
             <Menu />
         </div>
     </div>
+    </Suspense>
   )
 }
 
