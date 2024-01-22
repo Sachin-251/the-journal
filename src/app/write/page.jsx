@@ -139,6 +139,7 @@ const WritePage = () => {
             <option value="coding">coding</option>
         </select>
         <div className={styles.editor}>
+            <div>
             <button className={styles.button} onClick={() => setOpen(!open)}>
                 <Image src='/plus.png' alt='' width={16} height={16} />
             </button>
@@ -150,7 +151,7 @@ const WritePage = () => {
                         onChange={(e) => setFile(e.target.files[0])}
                         style={{ display: "none" }}
                     />
-                    <button className={styles.addButton}>
+                    <button title='Add Featured Image' className={styles.addButton}>
                         <label htmlFor="image" style={{cursor: "pointer"}}>
                             <Image src='/image.png' alt='' width={16} height={16} />
                         </label>
@@ -163,6 +164,7 @@ const WritePage = () => {
                     </button>
                 </div>
             )}
+            </div>
             <ReactQuill className={styles.descArea} theme='snow' modules={modules} formats={formats} value={value} onChange={setValue} placeholder='Tell your story...' />
         </div>
 

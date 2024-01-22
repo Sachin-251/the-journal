@@ -37,17 +37,18 @@
   }
   
   .addButton {
+    border: 20%;
     border-color: #1a8917;
     background-color: var(--bg);
   }
   
   .add {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     position: absolute;
     z-index: 999;
-    width: 100%;
-    left: 50px;
+    margin-top: 20px;
   }
   
   .input{
