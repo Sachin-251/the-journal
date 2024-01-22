@@ -43,9 +43,9 @@ const modules = {
     'link', 'image', 'video',
   ];
 
-const WritePage = () => {
+  const ReactQuill = dynamic(() => import('react-quill'),{ssr: false});
 
-    const ReactQuill = dynamic(() => import('react-quill'),{ssr: false});
+const WritePage = () => {
     const { status } = useSession();
     const router = useRouter();
 
