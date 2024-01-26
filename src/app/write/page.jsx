@@ -14,6 +14,7 @@ import {
 import { app } from '@/utils/firebase';
 import dynamic from 'next/dynamic';
 import Loader from '@/components/loader/Loader';
+import CategoriesOptions from '@/components/categoriesOptions/CategoriesOptions';
 
 const modules = {
     toolbar: [
@@ -43,8 +44,9 @@ const modules = {
     'align',
     'link', 'image', 'video',
   ];
+  
 
-  const ReactQuill = dynamic(() => import('react-quill'),{ssr: false});
+const ReactQuill = dynamic(() => import('react-quill'),{ssr: false});
 
 const WritePage = () => {
     const { status } = useSession();
@@ -126,19 +128,18 @@ const WritePage = () => {
         }
     };
 
-
   return (
     <Suspense fallback={<Loader />}>
     <div className={styles.container}>
         <input type="text" placeholder='Title' className={styles.input} onChange={(e) => setTitle(e.target.value)} />
         <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)} required>
             <option value="">Category</option>
-            <option value="style">style</option>
-            <option value="fashion">fashion</option>
-            <option value="food">food</option>
-            <option value="culture">culture</option>
-            <option value="travel">travel</option>
-            <option value="coding">coding</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+            <option value="food">Food</option>
+            <option value="culture">Culture</option>
+            <option value="travel">Travel</option>
+            <option value="coding">Coding</option>
         </select>
         <div className={styles.editor}>
             <div>
