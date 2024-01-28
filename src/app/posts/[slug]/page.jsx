@@ -36,8 +36,8 @@ const SinglePage = async ({params}) => {
                     )}
                     
                     <div className={styles.userTextContainer}>
-                        <Link href={`/author?name=${data?.user.name}&postId=${data?.id}`} shallow>
-                            <span className={styles.username}>{data?.user.name}</span>
+                        <Link href={`/author?name=${data?.user?.name}&postId=${data?.id}`} shallow>
+                            <span className={styles.username}>{data?.user?.name}</span>
                         </Link>
                         
                         <span className={styles.date}>{data?.createdAt.substring(0, 10)}</span>

@@ -16,7 +16,7 @@
   }
   
   .loader .circle {
-    --color: #333;
+    --color: var(--textColor);
     --dim: 1.2rem;
     width: var(--dim);
     height: var(--dim);

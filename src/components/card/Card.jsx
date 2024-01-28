@@ -13,7 +13,7 @@ function Card({key, item}) {
                 <div className={styles.detail}>
                     <span className={styles.date}>{item.createdAt.substring(0, 10)} -{" "}</span>
                     <span className={styles.category}>{item.catSlug}</span>
-                    <span style={{color: 'orange'}}> - {item.user.name}</span>
+                    <span style={{color: 'orange'}}> - {item?.user?.name}</span>
                 </div>
 
                 <Link href={`/posts/${item.slug}`} shallow>
