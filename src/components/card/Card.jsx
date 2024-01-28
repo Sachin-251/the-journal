@@ -13,14 +13,15 @@ function Card({key, item}) {
                 <div className={styles.detail}>
                     <span className={styles.date}>{item.createdAt.substring(0, 10)} -{" "}</span>
                     <span className={styles.category}>{item.catSlug}</span>
+                    <span style={{color: 'orange'}}> - {item.user.name}</span>
                 </div>
 
-                <Link href={`/posts/${item.slug}`}>
+                <Link href={`/posts/${item.slug}`} shallow>
                     <h1>{item.title}</h1>
                 </Link>
                 <p className={styles.desc} dangerouslySetInnerHTML={{ __html: item?.desc.substring(0, 170)+'...' }}></p>
 
-                <Link className={styles.link} href={`/posts/${item.slug}`}>Read More</Link>
+                <Link className={styles.link} href={`/posts/${item.slug}`} shallow>Read More</Link>
             </div>
     </div>
   )

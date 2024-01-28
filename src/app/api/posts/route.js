@@ -19,6 +19,7 @@ export const GET = async (req) => {
     orderBy: {
       createdAt: 'desc',
     },
+    include: {user: true},
   };
   try {
     const [posts, count] = await prisma.$transaction([

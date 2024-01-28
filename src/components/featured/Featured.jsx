@@ -28,9 +28,9 @@ async function Featured() {
         </div>
 
         <div className={styles.textContainer}>
-          <Link href={`/posts/${data?.slug}`}><h1 className={styles.postTitle}>{data?.title}</h1></Link>
+          <Link href={`/posts/${data?.slug}`} shallow><h1 className={styles.postTitle}>{data?.title}</h1></Link>
           <p className={styles.postDesc} dangerouslySetInnerHTML={{ __html: data?.desc.substring(0, 250)+'...' }}></p>
-          <Link href={`/posts/${data?.slug}`} className={styles.button}>Read More</Link>
+          <Link href={`/posts/${data?.slug}`} className={styles.button} shallow>Read More</Link>
         </div>
       </div>
     </div>

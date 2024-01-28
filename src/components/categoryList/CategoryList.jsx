@@ -26,7 +26,7 @@ async function CategoryList() {
       <div className={styles.categories}>
         {
           data?.map((item) => (
-            <Link key={item._id} href={`/blog?cat=${item.slug}`} className={`${styles.category} ${styles[item.slug]}`}>
+            <Link key={item._id} href={`/blog?cat=${item.slug}`} className={`${styles.category} ${styles[item.slug]}`} shallow>
               {item.img && (
                 <Image src={item.img} alt='' width={32} height={32} className={styles.image} />
               )}

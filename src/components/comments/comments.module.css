@@ -18,6 +18,11 @@
   .input {
     padding: 20px;
     width: 100%;
+    background-color: var(--softBg);
+    color: var(--textColor);
+    border-radius: 5px;
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   .button {
@@ -36,6 +41,10 @@
   
   .comment{
     margin-bottom: 50px;
+  }
+
+  .comment p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   .user {

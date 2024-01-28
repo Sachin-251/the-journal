@@ -15,11 +15,11 @@ function Navbar() {
         <Image src='/youtube.png' alt='facebook' width={24} height={24} />
       </div>
 
-      <div className={styles.logo}>The Journal</div>
+      <div className={styles.logo}><Link href='/' shallow>The Journal</Link></div>
 
       <div className={styles.links}>
         <ThemeToggle />
-        <Link className={styles.link} href='/'>Home</Link>
+        <Link className={styles.link} href='/' shallow>Home</Link>
         <Link className={styles.link} href='/'>Contact</Link>
         <Link className={styles.link} href='/'>About</Link>
         <AuthLinks />

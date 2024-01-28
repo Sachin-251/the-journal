@@ -66,7 +66,7 @@
   .description p {
     font-size: 20px;
     font-weight: 300;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     text-align: justify;
   }
 
@@ -83,6 +83,16 @@
   .description h3{
     font-size: 26px;
     font-weight: 600;
+  }
+  .description h4{
+    font-size: 24px;
+  }
+
+  .description li{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 10px;
+    text-align: justify;
   }
 
   .description img{
@@ -135,5 +145,13 @@
 
     .description h3{
       font-size: 22px;
+    }
+
+    .description h4{
+      font-size: 20px;
+    }
+
+    .description li{
+      font-size: 18px;
     }
   }

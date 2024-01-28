@@ -11,6 +11,7 @@ function Menu() {
       <h1 className={styles.title}>Most Popular</h1>
       <MenuPopular />
 
+    <div className={styles.sidebar}>
       <h2 className={styles.subtitle}>Discover by topic</h2>
       <h1 className={styles.title}>Categories</h1>
       <MenuCategories />
@@ -18,6 +19,8 @@ function Menu() {
       <h2 className={styles.subtitle}>Chosen by the editor</h2>
       <h1 className={styles.title}>Editor&apos;s Pick</h1>
       <MenuPosts />
+    </div>
+      
     </div>
   )
 }
