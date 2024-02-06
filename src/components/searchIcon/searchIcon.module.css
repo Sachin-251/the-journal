@@ -1,0 +1,32 @@
+.inputBox_container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    max-width: 14em;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--softBg);
+    border-radius: 0.8em;
+    border: 2px solid var(--softTextColor);
+    overflow: hidden;
+  }
+  
+  .search_icon {
+    height: 1em;
+    padding: 0 0.5em 0 0.8em;
+    fill: var(--textColor);
+  }
+  
+  .inputBox {
+    background-color: transparent;
+    color: var(--textColor);
+    outline: none;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 0;
+    font-size: 1em;
+  }
+  
+ .inputBox ::placeholder {
+    color: var(--softTextColor);
+  }

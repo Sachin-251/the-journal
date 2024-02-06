@@ -33,7 +33,7 @@ const AuthorPage = async ({searchParams}) => {
         <div className={styles.posts}>
             {
             data?.map((item) => (
-                <Card item={item} key={item._id} />
+                <Card item={item} key={item._id} name={name} />
             ))
             }
         </div>

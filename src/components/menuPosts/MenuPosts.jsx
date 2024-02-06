@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const getData = async () => {
-    const res = await fetch(`${process.env.URL}/api/posts/editorchoice`,{});
+    const res = await fetch(`${process.env.URL}/api/posts/editorchoice`,{cache: "no-store"});
   
     if(!res.ok){
       throw new Error("Failed")

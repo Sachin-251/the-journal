@@ -16,7 +16,7 @@
     overflow: auto;
     position: -webkit-sticky;
     position: sticky;
-    top: 5%;
+    top: 2%;
   }
   
   /* @media screen and (max-width: 1024px) {
