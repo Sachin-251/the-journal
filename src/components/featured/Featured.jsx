@@ -24,12 +24,12 @@ async function Featured() {
 
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src={data.img} alt='' fill className={styles.image} />
+          <Image src={data.img} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className={styles.image} priority />
         </div>
 
         <div className={styles.textContainer}>
-          <Link href={`/posts/${data?.slug}`} shallow><h1 className={styles.postTitle}>{data?.title}</h1></Link>
-          <p className={styles.postDesc} dangerouslySetInnerHTML={{ __html: data?.desc.substring(0, 250)+'...' }}></p>
+          <Link href={`/posts/${data?.slug}`} shallow><h2 className={styles.postTitle}>{data?.title}</h2></Link>
+          <p className={styles.postDesc} dangerouslySetInnerHTML={{ __html: data?.desc?.substring(0, 250)+'...' }}></p>
           <Link href={`/posts/${data?.slug}`} className={styles.button} shallow>Read More</Link>
         </div>
       </div>

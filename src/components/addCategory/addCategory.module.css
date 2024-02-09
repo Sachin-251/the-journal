@@ -1,0 +1,42 @@
+.select{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    width: max-content;
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    color: grey;
+    font-weight: 800;
+  }
+
+  .selectCategory{
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    margin-left: 50px;
+    margin-bottom: 30px;
+  }
+
+  .selectCategory p{
+    color: grey;
+    font-weight: 800;
+  }
+
+  .selectCategory input{
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: transparent;
+    border: 1px solid var(--textColor);
+    color: grey;
+    font-weight: 800;
+  }
+
+  .selectCategory button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #1a8917;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 5px;
+  }

@@ -18,6 +18,7 @@ const getData = async () => {
 async function CategoryList() {
 
   const data = await getData();
+  const slicedData = data.slice(0,6);
 
   return (
     <div className={styles.container}>
@@ -25,7 +26,7 @@ async function CategoryList() {
 
       <div className={styles.categories}>
         {
-          data?.map((item) => (
+          slicedData?.map((item) => (
             <Link key={item._id} href={`/blog?cat=${item.slug}`} className={`${styles.category} ${styles[item.slug]}`} shallow>
               {item.img && (
                 <Image src={item.img} alt='' width={32} height={32} className={styles.image} />

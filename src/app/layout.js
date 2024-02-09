@@ -5,6 +5,8 @@ import Footer from '@/components/footer/Footer'
 import { ThemeContextProvider } from '@/context/ThemeContext'
 import ThemeProvider from '@/providers/ThemeProvider'
 import AuthProvider from '@/providers/AuthProvider'
+import { WebVitals } from '@/utils/web-vitals'
+import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,9 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <WebVitals />
         <AuthProvider>
           <ThemeContextProvider>
             <ThemeProvider>
+              <Toaster />
               <div className='container'>
                 <div className='wrapper'>
                   <Navbar />

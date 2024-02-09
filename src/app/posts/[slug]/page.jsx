@@ -31,7 +31,7 @@ const SinglePage = async ({params}) => {
                 <div className={styles.user}>
                     {data?.user?.image && (
                         <div className={styles.userImageContainer}>
-                            <Image src={data.user.image} alt='' fill className={styles.avatar} />
+                            <Image src={data.user.image} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className={styles.avatar} priority />
                         </div>
                     )}
                     
@@ -45,7 +45,7 @@ const SinglePage = async ({params}) => {
                 </div>
             </div>
             <div className={styles.imageContainer}>
-                <Image src={data?.img} alt='' fill className={styles.image} />
+                <Image src={data?.img} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className={styles.image} />
             </div>
         </div>
 

@@ -17,12 +17,13 @@ const getData = async () => {
 const MenuCategories = async () => {
 
     const data = await getData();
+    const slicedData = data.slice(0,6);
 
   return (
     <div className={styles.categoryList}>
 
         {
-            data?.map((item) => (
+            slicedData?.map((item) => (
                 <Link key={item._id} href={`/blog?cat=${item.slug}`} className={`${styles.categoryItem} ${styles[item.slug]}`} shallow>
                     {item.title}
                 </Link>

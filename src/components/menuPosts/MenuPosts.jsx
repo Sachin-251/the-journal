@@ -23,7 +23,7 @@ const MenuPosts = async () => {
                 posts?.map(post => (
                     <Link href={`/posts/${post?.slug}`} className={styles.item} key={post?._id} shallow>
                         <div className={styles.imageContainer}>
-                            <Image src={post?.img} alt='' fill className={styles.image} />
+                            <Image src={post?.img} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className={styles.image} />
                         </div>
 
                         <div className={styles.textContainer}>

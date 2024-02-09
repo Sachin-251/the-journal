@@ -15,6 +15,8 @@ import { app } from '@/utils/firebase';
 import dynamic from 'next/dynamic';
 import Loader from '@/components/loader/Loader';
 import CategoriesOptions from '@/components/categoriesOptions/CategoriesOptions';
+import toast from 'react-hot-toast';
+import AddCategory from '@/components/addCategory/AddCategory';
 
 const modules = {
     toolbar: [
@@ -58,6 +60,9 @@ const WritePage = () => {
     const [value, setValue] = useState("");
     const [title, setTitle] = useState("");
     const [catSlug, setCatSlug] = useState("");
+    // const [newCat, setNewCat] = useState("");
+    // const [catList, setCatList] = useState([]);
+    console.log(catSlug);
 
     useEffect(() => {
         const storage = getStorage(app);
@@ -128,19 +133,45 @@ const WritePage = () => {
         }
     };
 
+    // const getData = () => {
+    //     return fetch('/api/categories')
+    //         .then((res) => res.json())
+    //         .then((d) => setCatList(d))
+    // }
+
+    // useEffect(() => {
+    //     getData();
+    // },[catList]);
+
+    // const handleAddCategory = async () => {
+    //     const res = await fetch("/api/categories", {
+    //         method: "POST",
+    //         body: JSON.stringify({
+    //             slug: slugify(newCat),
+    //             title: newCat,
+    //             img: '/technology.png'
+    //         }),
+    //     });
+
+    //     if(res.status === 402){
+    //         toast.error("Category already exist");
+    //     }
+
+    //     if(res.status === 200){
+    //         setNewCat("");
+    //         const data = await res.json();
+    //         console.log(data);
+    //         toast.success("Category Created");
+    //     }
+    // }
+
   return (
     <Suspense fallback={<Loader />}>
     <div className={styles.container}>
         <input type="text" placeholder='Title' className={styles.input} onChange={(e) => setTitle(e.target.value)} />
-        <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)} required>
-            <option value="">Category</option>
-            <option value="technology">Technology</option>
-            <option value="fashion">Fashion</option>
-            <option value="food">Food</option>
-            <option value="culture">Culture</option>
-            <option value="travel">Travel</option>
-            <option value="coding">Coding</option>
-        </select>
+        
+        <AddCategory setCatSlug={setCatSlug} />
+        
         <div className={styles.editor}>
             <div>
             <button className={styles.button} onClick={() => setOpen(!open)}>
