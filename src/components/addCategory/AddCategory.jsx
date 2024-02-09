@@ -58,7 +58,7 @@ const AddCategory = ({setCatSlug}) => {
             <option value="">Category</option>
             {
                 catList?.map((category) => (
-                    <option value={category.slug}>{category.title}</option>
+                    <option key={category.id} value={category.slug}>{category.title}</option>
                 ))
             }
             {/* <option value="technology">Technology</option>
