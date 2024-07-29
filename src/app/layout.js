@@ -18,6 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/featured.jpg" as='image' />
+      </head>
       <body className={inter.className}>
         <WebVitals />
         <AuthProvider>

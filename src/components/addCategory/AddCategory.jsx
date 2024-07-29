@@ -61,16 +61,10 @@ const AddCategory = ({setCatSlug}) => {
                     <option key={category.id} value={category.slug}>{category.title}</option>
                 ))
             }
-            {/* <option value="technology">Technology</option>
-            <option value="fashion">Fashion</option>
-            <option value="food">Food</option>
-            <option value="culture">Culture</option>
-            <option value="travel">Travel</option>
-            <option value="coding">Coding</option> */}
         </select>
         <p>OR</p>
         <input type='text' placeholder='Add Category' value={newCat} onChange={(e) => {setNewCat(e.target.value)}}/>
-        <button onClick={handleAddCategory}>Add Category</button>
+        <button onClick={handleAddCategory}>Add</button>
     </div>
   )
 }

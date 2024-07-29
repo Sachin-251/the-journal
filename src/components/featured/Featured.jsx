@@ -24,7 +24,7 @@ async function Featured() {
 
       <div className={styles.post}>
         <div className={styles.imgContainer}>
-          <Image src={data.img} alt='' fill sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' className={styles.image} priority />
+          <Image src={data.img} alt='featured' fill sizes='(max-width: 1024px) 0vw, (max-width: 1200px) 50vw, 33vw' className={styles.image} priority />
         </div>
 
         <div className={styles.textContainer}>
